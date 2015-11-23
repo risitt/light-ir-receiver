@@ -1,0 +1,36 @@
+#######################################
+# Syntax Coloring Map For light-ir-receiver
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+lirrPulseFractionSettings_t	KEYWORD1
+lirrBiPhaseSettings_t	KEYWORD1
+lirrButtonState_t	KEYWORD1
+remoteEvents_t	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+lirrBegin	KEYWORD2
+lirrGetEvents	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+PROTOCOL_NEC	LITERAL1
+PROTOCOL_JVC	LITERAL1
+PROTOCOL_RCA	LITERAL1
+PROTOCOL_SHARP	LITERAL1
+PROTOCOL_SAMSUNG	LITERAL1
+PROTOCOL_SIRC	LITERAL1
+PROTOCOL_RC5	LITERAL1
+PROTOCOL_RC6_MODE0	LITERAL1
+BUTTON_NONE	LITERAL1
+BUTTON_PRESSED	LITERAL1
+BUTTON_HELD	LITERAL1
+BUTTON_RELEASED	LITERAL1
