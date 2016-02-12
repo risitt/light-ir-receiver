@@ -128,13 +128,11 @@ const lirrBiPhaseSettings_t PROTOCOL_RC6_MODE0 = {21,false,{688,1088},{3796,4196
 // 3 bytes
 const uint32_t repeatInt = 100000UL; // how long to wait for repeat codes before determining that a button is no longer being pressed
 
-enum lirrButtonState_t: uint8_t
-{
-	BUTTON_NONE = 0,
-	BUTTON_PRESSED,
-	BUTTON_HELD,
-	BUTTON_RELEASED
-};
+// not using a true enum here because this allows us to simulate a scoped enum with better Arduino IDE compatibility
+const uint8_t BUTTON_NONE = 0;
+const uint8_t BUTTON_PRESSED = 1;
+const uint8_t BUTTON_HELD = 2;
+const uint8_t BUTTON_RELEASED = 3;
 
 struct remoteEvents_t
 {
@@ -142,7 +140,7 @@ struct remoteEvents_t
 	volatile uint32_t pressTime;
     uint32_t curTime;
 	volatile uint32_t buttonCode;
-	lirrButtonState_t buttonState;
+	uint8_t buttonState;
 	volatile bool toggleState;
 };
 
