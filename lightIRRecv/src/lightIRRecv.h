@@ -140,6 +140,7 @@ struct remoteEvents_t
 {
 	// 10 bytes
 	volatile uint32_t pressTime;
+    uint32_t curTime;
 	volatile uint32_t buttonCode;
 	lirrButtonState_t buttonState;
 	volatile bool toggleState;
