@@ -30,7 +30,7 @@ Limitations:
 
 static volatile uint32_t referenceTime;
 static uint32_t incomingCode;
-static remoteEvents_t remoteEvents = {0,0,BUTTON_NONE,false};
+static remoteEvents_t remoteEvents = {0,0,0,BUTTON_NONE,false};
 #ifdef lirrTest
 static volatile uint32_t decodeTime = 0;
 static volatile uint32_t decodeCount = 0;
@@ -256,7 +256,7 @@ remoteEvents_t lirrGetEvents(void)
 	SREG = oldSREG;
 	
 	// get current time
-	uint32_t curTime = micros();
+	remoteEvents.curTime = micros();
 	
 	switch(remoteEvents.buttonState)
 	{
@@ -268,7 +268,7 @@ remoteEvents_t lirrGetEvents(void)
 		{
 			// if a button has not been pressed in a while, set the released event
 			// and start reading new codes
-			if ((curTime - lastSignalTime) > repeatInt)
+			if ((remoteEvents.curTime - lastSignalTime) > repeatInt)
 				remoteEvents.buttonState = BUTTON_RELEASED;
 			break;
 		}
