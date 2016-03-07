@@ -240,6 +240,15 @@ void lirrBegin(uint8_t pinInterrupt, const lirrBiPhaseSettings_t &remoteProtocol
 }
 
 // ----------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------
+
+void lirrClearEvents(void)
+{
+    remoteEvents.buttonState = BUTTON_NONE;
+    remoteEvents.buttonCode = 0;
+}
+
+// ----------------------------------------------------------------------------------------------------
 // This function captures available button codes and determines pressed, held, and released states
 // ----------------------------------------------------------------------------------------------------
 

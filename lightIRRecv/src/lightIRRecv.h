@@ -149,6 +149,7 @@ struct remoteEvents_t
 void lirrBegin(uint8_t pinInterrupt, const lirrPulseFractionSettings_t &remoteProtocol);
 void lirrBegin(uint8_t pinInterrupt, const lirrBiPhaseSettings_t &remoteProtocol);
 
+void lirrClearEvents(void);
 remoteEvents_t lirrGetEvents(void);
 
 #endif
