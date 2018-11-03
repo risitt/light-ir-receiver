@@ -27,11 +27,7 @@ GNU Lesser General Public License (LGPL) V2.1
 **Please see the LICENSE file for details**
 
 ## Installation Instructions:
-1. Download or clone the latest release
-2. Extract the archive contents if you downloaded the .zip
-3. Copy or move the folder "lightIRRecv" to your Ardunio library folder
-	* On a Windows PC, this is likely to be C:\Program Files (x86)\Arduino\libraries
-	* On Linux, this is likely to be /home/&lt;username&gt;/Sketchbook/libraries or /home/&lt;username&gt;/Arduino/libraries
-5. Restart the Arduino IDE if it was running
-6. Include the library in your sketch: **#include &lt;lightIRRecv.h&gt;**
-7. Read the API Documentation, or see the example sketches for information on how to use the library
+1. Download the source code ZIP for the latest release of the library: https://github.com/risitt/light-ir-receiver/releases
+2. In the Arduino IDE main menu, select Sketch > Include Library > Add .ZIP Library, then select the downloaded file and click on "Open"
+3. Include the library in your sketch: **#include &lt;lightIRRecv.h&gt;**
+4. Read the API Documentation, or see the example sketches for information on how to use the library
